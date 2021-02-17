@@ -137,3 +137,31 @@ type StationTimetables []struct {
 		OdptIsLast             bool     `json:"odpt:isLast,omitempty"`
 	} `json:"odpt:stationTimetableObject"`
 }
+
+type Operators []struct {
+	ID                string    `json:"@id"`
+	Type              string    `json:"@type"`
+	DcDate            time.Time `json:"dc:date"`
+	Context           string    `json:"@context"`
+	DcTitle           string    `json:"dc:title"`
+	OwlSameAs         string    `json:"owl:sameAs"`
+	OdptOperatorTitle struct {
+		En string `json:"en"`
+		Ja string `json:"ja"`
+	} `json:"odpt:operatorTitle"`
+}
+
+type TrainTypes []struct {
+	ID                 string    `json:"@id"`
+	Type               string    `json:"@type"`
+	DcDate             time.Time `json:"dc:date"`
+	Context            string    `json:"@context"`
+	DcTitle            string    `json:"dc:title"`
+	OwlSameAs          string    `json:"owl:sameAs"`
+	OdptOperator       string    `json:"odpt:operator"`
+	OdptTrainTypeTitle struct {
+		En string `json:"en"`
+		Ja string `json:"ja"`
+	} `json:"odpt:trainTypeTitle"`
+}
+
