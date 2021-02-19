@@ -165,7 +165,7 @@ type TrainTypes []struct {
 	} `json:"odpt:trainTypeTitle"`
 }
 
-type Calendar []struct {
+type Calendars []struct {
 	ID                string    `json:"@id"`
 	Type              string    `json:"@type"`
 	DcDate            time.Time `json:"dc:date,omitempty"`
