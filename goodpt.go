@@ -165,3 +165,19 @@ type TrainTypes []struct {
 	} `json:"odpt:trainTypeTitle"`
 }
 
+type Calendar []struct {
+	ID                string    `json:"@id"`
+	Type              string    `json:"@type"`
+	DcDate            time.Time `json:"dc:date,omitempty"`
+	Context           string    `json:"@context"`
+	DcTitle           string    `json:"dc:title"`
+	OwlSameAs         string    `json:"owl:sameAs"`
+	OdptCalendarTitle struct {
+		En string `json:"en"`
+		Ja string `json:"ja"`
+	} `json:"odpt:calendarTitle,omitempty"`
+	OdptOperator string   `json:"odpt:operator,omitempty"`
+	OdptDay      []string `json:"odpt:day,omitempty"`
+	OdptNote     string   `json:"odpt:note,omitempty"`
+	OdptDuration string   `json:"odpt:duration,omitempty"`
+}
