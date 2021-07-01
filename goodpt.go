@@ -108,6 +108,7 @@ type TrainTimetables []struct {
 	OdptOriginStation        []string  `json:"odpt:originStation"`
 	OdptRailDirection        string    `json:"odpt:railDirection"`
 	OdptDestinationStation   []string  `json:"odpt:destinationStation"`
+	OdptNextTrainTimetable   []string  `json:"odpt:nextTrainTimetable"`
 	OdptTrainTimetableObject []struct {
 		OdptDepartureTime    string `json:"odpt:departureTime,omitempty"`
 		OdptDepartureStation string `json:"odpt:departureStation,omitempty"`
